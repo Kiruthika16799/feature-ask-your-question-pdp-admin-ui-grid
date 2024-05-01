@@ -1,5 +1,5 @@
 # feature-ask-your-question-pdp-admin-ui-grid
-# Customer question tab section in PDP &amp; Admin UI grid
+ Customer question tab section in PDP &amp; Admin UI grid
 
 # Magento version : 2.4.7
 
