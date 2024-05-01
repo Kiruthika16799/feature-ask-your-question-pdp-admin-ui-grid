@@ -27,30 +27,6 @@ class QuestionRepository implements QuestionRepositoryInterface
 
     public function postQuestion($name, $email, $question)
     {
-        $response = $this->jsonFactory->create();
-        $responseData = [
-            'message' => 'Invalid email address.',
-            'status' => true,
-        ];
-        $response->setData($responseData);
-        return $response;
-
-
-
-         // Validate input
-        if (empty($name) || empty($email) || empty($question)) {
-            return $this->getErrorResponse('Name, email, and question are required.');
-        }
-
-        // Validate email address
-        if (!$this->emailValidator->isValid($email)) {
-            $responseData = [
-                'message' => 'Invalid email address.',
-                'status' => true,
-            ];
-            return $responseData;
-        }
-
         try {
             // save customer question table
             $questionModel = $this->questionFactory->create();
@@ -59,25 +35,9 @@ class QuestionRepository implements QuestionRepositoryInterface
             $questionModel->setQuestion($question);
             $questionModel->save();
 
-            return $this->getSuccessResponse('Question saved successfully.');
+            return true;
         } catch (\Exception $e) {
-            return $this->getErrorResponse('An error occurred while saving the question.');
+            return false;
         }
-    }
-
-    private function getErrorResponse($message)
-    {
-        $data = [];
-        $data['message'] = $message;
-        $data['status'] = true;
-        return $data;
-    }
-
-    private function getSuccessResponse($message)
-    {
-        $data = [];
-        $data['message'] = $message;
-        $data['status'] = false;
-        return $data;
     }
 }

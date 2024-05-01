@@ -8,7 +8,7 @@ interface QuestionRepositoryInterface
      * @param string $name
      * @param string $email
      * @param string $question
-     * @return void
+     * @return bool
      */
     public function postQuestion($name, $email, $question);
 }
