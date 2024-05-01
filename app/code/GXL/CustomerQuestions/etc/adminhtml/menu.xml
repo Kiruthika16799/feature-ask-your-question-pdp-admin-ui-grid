@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="GXL_CustomerQuestions::customerquestions" title="GXL" module="GXL_CustomerQuestions" sortOrder="51" resource="GXL_CustomerQuestions::customerquestions"/>
+        <add id="GXL_CustomerQuestions::post" title="Manage Customer Questions" module="GXL_CustomerQuestions" sortOrder="10" action="gxl_customerquestions/post" resource="GXL_CustomerQuestions::post" parent="GXL_CustomerQuestions::customerquestions"/>
+    </menu>
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="GXL_CustomerQuestions::css/customquestions_tab.css"/>
+        <script src="GXL_CustomerQuestions::js/validation.js"/>
+    </head>
+    <body>
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="customquestions.tab" template="GXL_CustomerQuestions::product/view/details/customquestions_tab.phtml" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Ask Your Questions</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

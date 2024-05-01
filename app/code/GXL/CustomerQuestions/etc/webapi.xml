@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:WebApi/etc/webapi.xsd">
+    <!-- Get customer questions list -->
+    <route url="/V1/customer/questions" method="GET">
+        <service class="GXL\CustomerQuestions\Api\CustomerQuestionRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <!-- Post customer questions list -->
+     <route url="/V1/customer/questions" method="POST">
+        <service class="GXL\CustomerQuestions\Api\QuestionRepositoryInterface" method="postQuestion"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">   
+    <preference for="GXL\CustomerQuestions\Api\CustomerQuestionRepositoryInterface" type="GXL\CustomerQuestions\Model\CustomerQuestionRepository" />
+    <preference for="GXL\CustomerQuestions\Api\QuestionRepositoryInterface" type="GXL\CustomerQuestions\Model\QuestionRepository" />
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="gxl_customerquestions_post_listing_data_source" xsi:type="string">GXL\CustomerQuestions\Model\ResourceModel\Questions\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="GXL\CustomerQuestions\Model\ResourceModel\Questions\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">gxl_customer_questions</argument>
+            <argument name="resourceModel" xsi:type="string">GXL\CustomerQuestions\Model\ResourceModel\Questions</argument>
+        </arguments>
+    </virtualType>
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+             <resource id="Magento_Backend::admin">
+                <resource id="GXL_CustomerQuestions::customerquestions" title="GXL">
+                    <resource id="GXL_CustomerQuestions::post" title="Manage Customer Questions" sortOrder="30"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

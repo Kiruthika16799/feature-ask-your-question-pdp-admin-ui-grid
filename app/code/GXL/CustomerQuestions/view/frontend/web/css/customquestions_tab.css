@@ -1,0 +1,34 @@
+#customquestions_tab {
+    padding: 20px;
+}
+
+#customquestions_tab .form-group {
+    margin-bottom: 20px;
+}
+
+#customquestions_tab label {
+    font-weight: bold;
+}
+
+#customquestions_tab .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#customquestions_tab button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#customquestions_tab button:hover {
+    background-color: #0056b3;
+}
+#customquestions_tab .error-message{
+    color : red;
+}
